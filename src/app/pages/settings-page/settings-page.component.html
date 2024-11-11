@@ -1,0 +1,47 @@
+<app-profile-header></app-profile-header>
+
+<form class="profile-form__wrapper" [formGroup]="form">
+  <div class="profile-form">
+    <div class="two-columns">
+      <label class="form-label">
+        <span class="form-label__text">Имя</span>
+        <input type="text" class="form-input" formControlName="firstName" />
+      </label>
+
+      <label class="form-label">
+        <span class="form-label__text">Фамилия</span>
+        <input type="text" class="form-input" formControlName="lastName" />
+      </label>
+    </div>
+
+    <label class="form-label">
+      <span class="form-label__text">Telegram username</span>
+      <input type="text" class="form-input" formControlName="username" />
+    </label>
+
+    <label class="form-label">
+      <span class="form-label__text">О себе</span>
+      <textarea
+        formControlName="description"
+        rows="4"
+        class="form-input form-textarea"
+      ></textarea>
+    </label>
+
+    <label class="form-label">
+      <span class="form-label__text">Аватар</span>
+      <app-avatar-upload></app-avatar-upload>
+    </label>
+
+    <label class="form-label">
+      <span class="form-label__text">Навыки</span>
+      <input type="text" class="form-input" formControlName="stack" />
+    </label>
+  </div>
+
+  <div>
+    <div>
+      <button class="btn" (click)="onSave()">Сохранить</button>
+    </div>
+  </div>
+</form>

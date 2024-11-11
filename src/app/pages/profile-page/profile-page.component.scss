@@ -1,0 +1,101 @@
+.profile-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.to-settings-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--light-color);
+  }
+}
+
+.profile-page__settings-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--dark-color);
+}
+
+.profile-page__body {
+  display: grid;
+  gap: 64px;
+  grid-template-columns: 1fr 350px;
+  padding: 24px;
+}
+
+.profile-page__info {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.profile-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subscribers-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.subscriber-avatar-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+}
+
+.subscriber-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.no-subscribers-btn {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hover-color);
+  border: 2px solid var(--light-color);
+  color: var(--light-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: 2px solid var(--hover-color);
+  }
+}
+
+.to-search-btn-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+}
+
+.profile-page__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  height: min-content;
+}
+
+.no-info-text {
+  opacity: 0.6;
+}

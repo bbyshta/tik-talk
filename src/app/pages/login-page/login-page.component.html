@@ -1,0 +1,33 @@
+<form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1 class="h1">Вход</h1>
+  <label class="login-form__label">
+    Telegram username
+    <input
+      formControlName="username"
+      class="login-form__input"
+      type="text"
+      placeholder="Логин"
+    />
+  </label>
+
+  <label class="login-form__label">
+    Пароль
+    <span class="password-input">
+      <input
+        formControlName="password"
+        class="login-form__input"
+        [type]="isPasswordVisible() ? 'text' : 'password'"
+        placeholder="Пароль"
+      />
+      <button
+        type="button"
+        class="password-eye-btn"
+        [class.active]="isPasswordVisible()"
+        (click)="isPasswordVisible.set(!isPasswordVisible())"
+      ></button>
+    </span>
+  </label>
+  <button class="btn btn-shadow" type="submit">Войти</button>
+</form>
+
+<img src="/assets/svg/logo.svg" alt="logo" class="logo" />

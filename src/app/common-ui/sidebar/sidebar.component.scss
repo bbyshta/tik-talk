@@ -1,0 +1,118 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 12px;
+  background-color: var(--dark-color);
+  height: 100dvh;
+}
+
+.sidebar__logo {
+  width: 61px;
+  height: 74px;
+  margin-left: 16px;
+}
+
+.main-menu-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  border-radius: 2px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible,
+  &.active {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    .menu-icon {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--light-color);
+}
+
+.to-subscribers {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.to-subscribers-link {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--light-color);
+  }
+}
+
+.to-subscribers-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--primary-color);
+}
+
+.no-subscribers {
+  font-size: 15px;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+.sidebar__footer {
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  gap: 12px;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+.footer-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.username-text {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.settings-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color);
+
+  &:hover {
+    color: var(--light-color);
+  }
+}

@@ -1,0 +1,41 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.logo {
+  width: 440px;
+  height: 430px;
+  opacity: 85%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 500px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-btn {
+  width: 21px;
+  height: 21px;
+  background-image: url('/assets/svg/Hidden (crossed eye).svg');
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+}
+
+.password-eye-btn.active {
+  background-image: url('/assets/svg/eye.svg');
+}

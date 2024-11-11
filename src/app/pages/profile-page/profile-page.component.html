@@ -1,0 +1,76 @@
+@if (profile$ | async; as profile) {
+<header class="profile-page__header">
+  <app-profile-header [profile]="profile"> </app-profile-header>
+
+  <a [routerLink]="['/settings']" class="btn to-settings-btn">
+    Редактировать
+    <svg icon="settings" class="profile-page__settings-icon"></svg>
+  </a>
+</header>
+
+<main class="profile-page__body">
+  <app-post-feed></app-post-feed>
+  <section class="profile-page__info">
+    <div class="profile-page__section">
+      <h3 class="h6">Подписчики</h3>
+      <div class="subscribers-wrapper">
+        <ng-container *ngIf="subscribers$ | async as subscribers">
+          <ng-container *ngIf="subscribers.length > 0; else noSubscribers">
+            <ng-container
+              *ngFor="let profile of subscribers; track: profile.id"
+            >
+              <a
+                class="subscriber-avatar-btn"
+                [routerLink]="['/profile', profile.id]"
+              >
+                <img
+                  [src]="profile.avatarUrl | imgUrl"
+                  class="subscriber-avatar"
+                />
+              </a>
+            </ng-container>
+            <a [routerLink]="['/search']" class="to-search-btn">
+              <img src="/assets/svg/add-user.svg" class="to-search-btn-icon" />
+            </a>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="profile-page__section">
+      <h3 class="h6">Навыки</h3>
+      @if (profile.stack.length > 0) {
+      <div class="profile-page__skills">
+        @for (skill of profile.stack; track skill) {
+        <div class="skill-tag">{{ skill }}</div>
+        }
+      </div>
+      } @else {
+      <div class="profile-page__skills">
+        <div class="skill-tag">Добавьте</div>
+        <div class="skill-tag">свои</div>
+        <div class="skill-tag">навыки!</div>
+      </div>
+      }
+    </div>
+
+    <div class="profile-page__section">
+      <h3 class="h6">О себе</h3>
+      @if (profile.description !== "") {
+      <p class="medium-text">{{ profile.description }}</p>
+      } @else {
+      <p class="medium-text no-info-text">
+        Тут пусто. Добавьте информацию о себе!
+      </p>
+      }
+    </div>
+  </section>
+</main>
+
+<ng-template #noSubscribers>
+  <a [routerLink]="['/search']" class="no-subscribers-btn btn">
+    Добавить друзей
+    <img src="/assets/svg/add-user.svg" class="to-search-btn-icon" />
+  </a>
+</ng-template>
+}

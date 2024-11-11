@@ -1,0 +1,17 @@
+:host {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 24px;
+}
+
+.header-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: var(--hover-color);
+}
+
+.profile-name-and-username {
+  text-align: left;
+  margin-bottom: 4px;
+}

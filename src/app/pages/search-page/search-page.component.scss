@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  gap: 20px;
+}
+
+.profile-card__wrapper {
+  border: 1px solid var(--light-color);
+  display: grid;
+  gap: 8px;
+  height: calc(100dvh - 150px);
+  overflow-y: auto;
+  padding: 20px;
+}

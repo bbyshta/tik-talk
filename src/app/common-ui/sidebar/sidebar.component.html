@@ -1,0 +1,58 @@
+<section>
+  <img src="/assets/svg/logo.svg" alt="logo" class="sidebar__logo mb20" />
+
+  <nav>
+    <ul class="main-menu-list mb20">
+      <li *ngFor="let menuItem of menuItems">
+        <a
+          class="menu-item"
+          [routerLink]="[menuItem.link]"
+          routerLinkActive="active"
+        >
+          <svg class="menu-icon" [icon]="menuItem.icon"></svg>
+          <span>{{ menuItem.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <p class="mb20 medium-text">Подписчики</p>
+
+  <!--<ng-container *ngIf="subscribers$ | async as subscribers">
+      <ng-container *ngIf="subscribers.length > 0; else noSubscribers">
+        <ng-container *ngFor="let profile of subscribers; track: profile.id">
+          <app-subscriber-card [profile]="profile"></app-subscriber-card>
+        </ng-container>
+      </ng-container>
+    </ng-container> -->
+
+  @if (subscribers$ | async; as subscribers) { @if (subscribers.length > 0) {
+  @for (profile of subscribers$ | async; track profile.id) {
+  <app-subscriber-card [profile]="profile"></app-subscriber-card>
+  } }
+  <ng-template #noSubscribers>
+    <p class="no-subscribers">У вас пока нет подписчиков</p>
+  </ng-template>
+  }
+
+  <div class="to-subscribers">
+    <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text"
+      >Все подписчики</a
+    >
+    <svg icon="arrow" class="to-subscribers-icon"></svg>
+  </div>
+</section>
+
+<footer class="sidebar__footer">
+  @if(me(); as me) { @if(me.avatarUrl) {
+  <img [src]="me.avatarUrl | imgUrl" alt="" class="footer-avatar" />
+  } @else {
+  <img src="/assets/svg/avatar-placeholder.svg" class="footer-avatar" />
+  }
+  <div class="medium-text username-text">{{ me.username }}</div>
+
+  <a [routerLink]="['settings']">
+    <svg icon="settings" class="settings-icon"></svg>
+  </a>
+  }
+</footer>
