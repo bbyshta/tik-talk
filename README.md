@@ -1,38 +1,53 @@
 # TikTalk
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Проект сделан на  [Angular CLI](https://github.com/angular/angular-cli) версии 18.2.6. 
+Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/).
+Представляет из себя SPA для просмотра анкет специалистов. В этом проекте я знакомился с основами Angular. [Бэкэнд проекта](https://icherniakov.ru/yt-course/docs#/account/get_account_account__account_id__get)
+[![SyiXi.png](https://s11.gifyu.com/images/SyiXi.png)](https://gifyu.com/image/SyiXi)
 
-## Development server
+## Стек
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular](https://angular.dev/)
+- [RxJs](https://rxjs.dev/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Чему научился:
+- роутинг
+- создавать и обрабатывать формы в Angular
+- реализовывать авторизацию
+- изучил понятия сигналов, потоков, пайпов
+- понял, как работают cookie
+- условные конструкции @if @else
 
-## Code scaffolding
+## Требования
+Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/) и [Angular CLI](https://github.com/angular/angular-cli).
+  
+## Разработка
+Выполните команду `ng serve` для запуска сервера. Сервер доступен по адресу `http://localhost:4200/`. Приложение автоматически перезагрузится при изменениях в коде.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Функционал
+### Авторизация
+В приложении реализована функция авторизации с обновлением токенов.
+[![SyieR.png](https://s1.gifyu.com/images/SyieR.png)](https://gifyu.com/image/SyieR)
 
-## Build
+### Страница профиля
+Страница профиля с информацией о себе. В будущем планируется реализовать возможность создания постов.
+[![SyieD.png](https://s11.gifyu.com/images/SyieD.png)](https://gifyu.com/image/SyieD)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Информацию о себе можно редактировать
+[![SyieO.png](https://s11.gifyu.com/images/SyieO.png)](https://gifyu.com/image/SyieO)
 
-## Running unit tests
+### Поиск анкет
+Возможность просмотреть все анкеты и отфильтровать их по имени, фамилии и стеку. В будущем будет возможность подписаться.
+[![Syj2k.gif](https://s11.gifyu.com/images/Syj2k.gif)](https://gifyu.com/image/Syj2k)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-TODO:
+## TODO:
 
 - настроить типизацию в формах
 - добавить сообщения об ошибках авторизации
 - добавить анимации
 - добавить кастомные сообщения об ошибках при авторизации
 - сделать верстку адаптированной под mobile
-- возможность добавления, лайка, комментирования постов
-- система чатов
-- подписка на пользователей
+- **возможность создавать посты**
+- **возможность добавления, лайка, комментирования постов**
+- **система чатов**
+- **подписка на пользователей**
