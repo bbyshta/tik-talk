@@ -1,7 +1,6 @@
 # TikTalk
 
 Проект сделан на  [Angular CLI](https://github.com/angular/angular-cli) версии 18.2.6. 
-Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/).
 Представляет из себя SPA для просмотра анкет специалистов. В этом проекте я знакомился с основами Angular. [Бэкэнд проекта](https://icherniakov.ru/yt-course/docs#/account/get_account_account__account_id__get)
 [![SyiXi.png](https://s11.gifyu.com/images/SyiXi.png)](https://gifyu.com/image/SyiXi)
 
